@@ -31,12 +31,13 @@ class TransmitData(private val activity: Activity,private val brightness:Int) {
         frameCount = 0
         val d1 = "1" + data1 + "0"
         println("Sending + $d1")
-
+        var speed_frames = speed / 16.67
+        var mod_speed = speed_frames.toInt()
         val flashRunnable = object : Choreographer.FrameCallback {
             override fun doFrame(frameTimeNanos: Long) {
                 if (isFlashing) {
                     // Toggle colors at 30Hz (every second frame on a 60Hz display)
-                    if (frameCount % speed == 0) {
+                    if (frameCount % mod_speed == 0) {
                         textView.setBackgroundColor(
                             if (d1[9 - currentBitIndex] == '0') Color.BLACK else Color.WHITE
                         )
