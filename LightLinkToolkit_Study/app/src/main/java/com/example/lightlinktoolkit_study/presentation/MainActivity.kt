@@ -31,6 +31,8 @@ class MainActivity : ComponentActivity() {
 
     var experimentTool_ID = 2 // 1 for button , and 2 for analog sensor
     private lateinit var analogSensor:AnalogSensor
+    private lateinit var analogSensor_Microcontroller:analogSensor_Microcontroller
+
     private lateinit var buttonSensor:Button
 
     //var Button = Button()
@@ -45,10 +47,12 @@ class MainActivity : ComponentActivity() {
 
 
 
-        //Analog Sensor
-        analogSensor = AnalogSensor(this, 0, ::onAnalogValueChanged)  // Pass the reference of the main activity, and screen brightness
-        analogSensor.start()
+        //Use this for V-I converter based
+//        analogSensor = AnalogSensor(this, 0, maxLEDcurrent, ::onAnalogValueChanged)  // Pass the reference of the main activity, and screen brightness, max LED current
+//        analogSensor.start()
 
+        // Use this for PWM microcontroller based control
+        analogSensor_Microcontroller = analogSensor_Microcontroller(this, 0, 3.3, ::onAnalogValueChanged) // Max voltage_mic is 3.3 for 3.3V microcontroller - Only support 3.3 for now
         //One button
         //buttonSensor = Button(this, 500, 50, ::onButtonValueChanged)  //Reference of this class, threshold for detecting switch, screen brightness, callback for reading button status
     }

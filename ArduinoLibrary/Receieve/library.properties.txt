@@ -1,0 +1,9 @@
+name=BitReader
+version=1.0.0
+author=Your Name
+maintainer=Your Email
+sentence=Reads 8 digital bits from analog pin using thresholding.
+paragraph=LightLink Output Library
+category=Signal Input/Output
+url=https://your-library-repo-url (optional)
+architectures=*

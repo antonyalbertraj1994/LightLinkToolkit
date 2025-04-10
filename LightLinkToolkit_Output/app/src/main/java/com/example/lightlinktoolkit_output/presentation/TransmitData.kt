@@ -10,12 +10,14 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
 
-class TransmitData(private val activity: Activity, private val brightness:Int) {
+class TransmitData(private val activity: Activity,private val brightness:Int) {
     private var currentBitIndex = 0
     private var frameCount = 0
     private var isFlashing = false
 
     init {
+        setBrightness(brightness)
+
         println("Intialized")
     }
     private lateinit var update_button: Button

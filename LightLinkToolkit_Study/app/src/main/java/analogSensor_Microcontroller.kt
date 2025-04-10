@@ -1,3 +1,5 @@
+package com.example.lightlinktoolkit_study.presentation
+
 import android.app.Activity
 import android.content.ContentResolver
 
@@ -13,7 +15,7 @@ import android.view.WindowManager
 import org.apache.commons.math3.fitting.PolynomialCurveFitter
 import org.apache.commons.math3.fitting.WeightedObservedPoints
 
-class AnalogSensor (private val activity: Activity, private val brightness:Int, private val maxcurrent:Double, private val onSensorUpdate: (String) -> Unit ) {
+class analogSensor_Microcontroller (private val activity: Activity, private val brightness:Int, private val maxvoltage_mic:Double, private val onSensorUpdate: (String) -> Unit ) {
     private var coefficients_scaled = DoubleArray(3)
 
     var fitting_order_calibration = 1
@@ -30,7 +32,7 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
 
     fun start_calibration(maxlux:Double) {
         // New fitting
-        val points = load_data(maxlux)
+        val points = load_data_microcontroller_3(maxlux)
         var fitter = PolynomialCurveFitter.create(fitting_order_calibration)
         val extremes = getXMinMax(points)
         val min_current = extremes.first
@@ -38,7 +40,7 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
 
         val coefficients = fitter.fit(points.toList())
         println("Coefficient${coefficients[0]}, ${coefficients[1]}")
-        val calibration_current = maxcurrent// 6 for temperature sensor, 100 for microcontroller
+        val calibration_current = maxvoltage_mic // 6 for temperature sensor, 100 for microcontroller
         val calibration_lux = maxlux
         val scalefactor = calibration_lux / compute_function(coefficients, calibration_current)
         val current_smooth = linspace(min_current, max_current, 100)
@@ -53,8 +55,8 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
         println("CurrentPredicted:$current_predicted")
     }
 
-     fun start() {
-         setBrightness(brightness)
+    fun start() {
+        setBrightness(brightness)
         isTimerRunning = 1
         timer = object : CountDownTimer(5000, 1000) {  // 60 sec, interval 1 sec
             override fun onTick(millisUntilFinished: Long) {
@@ -69,7 +71,7 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
         }.start()
     }
 
-     fun computemax_lightval(list:MutableList<Int>):Double {
+    fun computemax_lightval(list:MutableList<Int>):Double {
         println("Computing max1")
         if (list.size < 3) return 0.0  // No local maxima possible in small lists
 
@@ -95,7 +97,7 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
     }
 
 
-     fun Sensor(event: SensorEvent):String {
+    fun Sensor(event: SensorEvent):String {
         val lightval = event.values[0]
         val lightvalue = lightval.toInt()
         println("Lightvalue:$lightvalue")
@@ -108,11 +110,11 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
             light_array.clear()
         }
 
-         if(isTimerRunning == 1) {
-             return "Calib"
-         }
+        if(isTimerRunning == 1) {
+            return "Calib"
+        }
 
-         framecount += 1
+        framecount += 1
         if(isWithinTenPercent(max_lightval, lightvalue, 0.02f) && start_tracking){
             val min_sensorval = light_array.min()
             light_array.clear()
@@ -213,7 +215,7 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
                 val sensor_value = Sensor(event)
                 println("Sensor listener")
                 onSensorUpdate(sensor_value.toString())
-                }
+            }
         }
 
         override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
@@ -225,7 +227,7 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
         lightSensor?.also {
             sensorManager.registerListener(sensorEventListener, it, SensorManager.SENSOR_DELAY_FASTEST)
             println("Sensor Registered")
-           // start()
+            // start()
         }
     }
 
@@ -235,7 +237,7 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
     }
 
 
-     fun setBrightness(brightness:Int?) {
+    fun setBrightness(brightness:Int?) {
         if (brightness == null) return
         val contentResolver: ContentResolver = activity.contentResolver
         Settings.System.putInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS, brightness!!)
@@ -248,124 +250,59 @@ class AnalogSensor (private val activity: Activity, private val brightness:Int, 
         activity.window.attributes = layoutParams
     }
 
-    fun load_data(threshold:Double): WeightedObservedPoints {
+
+    fun load_data_microcontroller_3(threshold:Double) : WeightedObservedPoints{
         val points = WeightedObservedPoints()
 
         // Your data as a multiline string
         val data = """
-          0.0 , 0
-          0.1 , 53
-          0.2 , 169
-          0.3 , 308
-          0.4 , 455
-          0.5 , 592
-          0.6 , 776
-          0.7 , 948
-          0.8 , 1087
-          0.9 , 1263
-          1.0 , 1434
-          1.1 , 1650
-          1.2 , 1840
-          1.3 , 2014
-          1.4 , 2147
-          1.5 , 2280
-          1.6 , 2413
-          1.7 , 2560
-          1.8 , 2689
-          1.9 , 2841
-          2.0 , 3006
-          2.1 , 3180
-          2.2 , 3340
-          2.3 , 3522
-          2.4 , 3704
-          2.5 , 3880
-          2.6 , 4023
-          2.7 , 4167
-          2.8 , 4240
-          2.9 , 4374
-          3.0 , 4508
-          3.1 , 4721
-          3.2 , 4831
-          3.3 , 5035
-          3.4 , 5110
-          3.5 , 5293
-          3.6 , 5425
-          3.7 , 5607
-          3.8 , 5802
-          3.9 , 5959
-          4.0 , 6069
-          4.1 , 6154
-          4.2 , 6298
-          4.3 , 6417
-          4.4 , 6587
-          4.5 , 6731
-          4.6 , 6825
-          4.7 , 6995
-          4.8 , 7168
-          4.9 , 7316
-          5.0 , 7486
-          5.1 , 7724
-          5.2 , 7774
-          5.3 , 7919
-          5.4 , 8063
-          5.5 , 8157
-          5.6 , 8292
-          5.7 , 8437
-          5.8 , 8597
-          5.9 , 8673
-          6.0 , 8843
-          6.1 , 8804
-          6.2 , 8973
-          6.3 , 9192
-          6.4 , 9308
-          6.5 , 9401
-          6.6 , 9474
-          6.7 , 9574
-          6.8 , 9709
-          6.9 , 9860
-          7.0 , 9995
-          7.1 , 10128
-          7.2 , 10295
-          7.3 , 10431
-          7.4 , 10529
-          7.5 , 10679
-          7.6 , 10839
-          7.7 , 10887
-          7.8 , 11150
-          7.9 , 11148
-          8.0 , 11342
-          8.1 , 11408
-          8.2 , 11534
-          8.3 , 11531
-          8.4 , 11820
-          8.5 , 11944
-          8.6 , 12017
-          8.7 , 12153
-          8.8 , 12328
-          8.9 , 12471
-          9.0 , 12606
-          9.1 , 12749
-          9.2 , 12772
-          9.3 , 12872
-          9.4 , 13008
-          9.5 , 13108
-          9.6 , 13258
-          9.7 , 13393
-          9.8 , 13441
-          9.9 , 13591
-          10.0 , 13803
-    """.trimIndent()
+        0.0 , 350
+        0.1 , 415
+        0.2 , 511
+        0.3 , 605
+        0.4 , 668
+        0.5 , 759
+        0.6 , 857
+        0.7 , 949
+        0.8 , 1016
+        0.9 , 1109
+        1.0 , 1211
+        1.1 , 1300
+        1.2 , 1374
+        1.3 , 1473
+        1.4 , 1568
+        1.5 , 1629
+        1.6 , 1738
+        1.7 , 1826
+        1.8 , 1929
+        1.9 , 1991
+        2.0 , 2088
+        2.1 , 2184
+        2.2 , 2292
+        2.3 , 2378
+        2.4 , 2474
+        2.5 , 2577
+        2.6 , 2650
+        2.7 , 2693
+        2.8 , 2819
+        2.9 , 2916
+        3.0 , 3019
+        3.1 , 3083
+        3.2 , 3201
+        3.3 , 3285
+""".trimIndent()
 
         // Parse and add the points
         data.lines().forEach { line ->
             val (x, y) = line.split(",").map { it.trim().toDouble() }
-            if( y < (threshold + 100)) {
-                points.add(x, y)
-            }
-
+            //if( y < (threshold)) {
+            points.add(x, y)
+            //}
         }
         return points
     }
+
+
 
 
 }

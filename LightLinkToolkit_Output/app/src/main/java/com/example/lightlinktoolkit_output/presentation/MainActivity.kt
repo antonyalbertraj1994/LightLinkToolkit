@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var TransmitData = TransmitData(this, 100)
+        var TransmitData = TransmitData(this, 10)
 
         dataflashingpixel = findViewById(R.id.datapixel)
         dataflashingpixel.setBackgroundColor(Color.WHITE)
