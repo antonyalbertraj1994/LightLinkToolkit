@@ -1,0 +1,10 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Availability
+"C1,C2,C4",C,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,3,,Yes
+C3,0.1uF,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,1,,Yes
+"D1,D2,D3,D4,D5",LED,~,-- mixed values --,5,,Yes
+J1,Conn_01x02_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,1,,Yes
+Q2,S8050,,S8050:SOT-23,1,,yes
+"R1,R2,R3,R4,R5,R6,R7,R8,R9,R11,RL1,RL2,RL3,RL4",R,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,14,,Yes
+U1,TCS3200D-TR,TCS3200D-TR,TCS3200:SO_3200D-TR_AMS,1,,Yes
+U2,ATtiny85-20S,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,Yes
+U3,MIC5504-3.3YM5-TR,MIC5504-3.3YM5-TR,MIC5504:SOT-23-5_MC_MCH,1,,Yes

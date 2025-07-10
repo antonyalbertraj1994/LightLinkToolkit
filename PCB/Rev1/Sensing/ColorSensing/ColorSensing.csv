@@ -1,0 +1,10 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Value,Digikey
+"C1,C2",C,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,2,,1uF,Done
+C3,0.1uF,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,1,,0.1uF,Done
+"D1,D2,D3,D4,D5",LED,~,-- mixed values --,5,,,Done
+J1,Conn_01x02_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,1,,,n/A
+Q1,S8050,http://www.unisonic.com.tw/datasheet/S8050.pdf,Package_TO_SOT_SMD:SOT-23-3,1,,,Done
+"R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,RL1,RL2,RL3,RL4",R,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,15,,"R1=10K, R2 =10K, R6=1K, R3=10K, R4=10k, R5 =10K, RL for all =330, 470",Done
+U1,TCS3200D-TR,TCS3200D-TR,TCS3200:SO_3200D-TR_AMS,1,,,Eval Module
+U2,ATtiny85-20S,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,,Done
+U3,MIC5504-3.3YM5-TR,MIC5504-3.3YM5-TR,MIC5504:SOT-23-5_MC_MCH,1,,,Done

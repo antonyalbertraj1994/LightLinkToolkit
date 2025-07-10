@@ -1,0 +1,8 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Value,Digikey
+"C1,C2",C,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,2,,1uF,Yes
+D1,LED,~,LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,1,,,Yes
+J1,Cnn,~,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,1,,,n/A
+"R1,R2,R3",R,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,3,,"R1=1K,R2 = 1K, R3=1K",Yes
+U1,CCS801,,CCS803:XDCR_CCS801,1,,,
+U2,ATtiny85,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,,Yes
+U3,MIC5504_1.8,MIC5504-1.8YM5-TR,SOT23-5LD-PL-1_MCH,1,,,Yes

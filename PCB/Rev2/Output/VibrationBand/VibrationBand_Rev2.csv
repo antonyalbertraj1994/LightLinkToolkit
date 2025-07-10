@@ -1,0 +1,12 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Availabilty
+"C1,C2",C,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,2,,Yes
+C3,0.1uF,~,Capacitor_SMD:C_0603_1608Metric,1,,Yes
+"C4,C5,C6",1uF,~,Capacitor_SMD:C_0603_1608Metric,3,,Yes
+"D1,D2,D3,D4",D,~,1N4148SMD:SOD123_DIO,4,,Yes
+"J2,J4,J5,J6",Conn_2,~,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,4,,Yes
+J7,Conn_01x04_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1,,Yes
+"R1,R3,R4,R5,R6,RF1",R,~,-- mixed values --,6,,Yes
+"TR1,TR2,TR3,TR4",MMBT2222A-TP,MMBT2222A-TP,MMBT2222A:MTR_MMBT2222A-TP_MCE,4,,Yes
+U1,ATtiny85,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,Yes
+U2,MIC5504,MIC5504-3.3YM5-TR,Package_TO_SOT_SMD:SOT-23-5,1,,Yes
+U3,LM321,http://www.ti.com/lit/ds/symlink/lm321.pdf,Package_TO_SOT_SMD:SOT-23-5,1,,Yes

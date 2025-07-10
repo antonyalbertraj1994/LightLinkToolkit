@@ -1,0 +1,6 @@
+"Reference","Value","Datasheet","Footprint","Qty","DNP"
+"C1,C2","C","~","Capacitor_SMD:C_0603_1608Metric","2",""
+"J1","Conn_01x04_Pin","~","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","1",""
+"R1,R2,R3,R4","R","~","Resistor_SMD:R_0603_1608Metric","4",""
+"SW1,SW2,SW3,SW4","222AMVBAR","222AMVBAR","222AMVBAR:SO4_222A-M-V-B_CTS","4",""
+"U1","MCP1700T-2502E/TT","MCP1700T-2502E/TT","SOT-23_MC_MCH","1",""

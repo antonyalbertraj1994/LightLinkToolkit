@@ -1,0 +1,7 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Availabilty
+"C1,C2,C3",C,~,Capacitor_SMD:C_0603_1608Metric,3,,Yes
+J1,Conn_01x04_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1,,Yes
+"R1,R2,R3,R4,R5",R,~,Resistor_SMD:R_0603_1608Metric,5,,Yes
+"SW1,SW2,SW3,SW4",222AMVBAR,222AMVBAR,222AMVBAR:SO4_222A-M-V-B_CTS,4,,Yes
+U1,MCP1700,MCP1700T-2502E/TT,MCP1700T_2.5V:SOT-23_MC_MCH,1,,Yes
+U2,ATtiny85-20S,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,Yes

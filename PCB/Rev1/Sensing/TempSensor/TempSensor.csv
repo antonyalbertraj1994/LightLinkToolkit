@@ -1,0 +1,8 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Value,Digikey
+"C1,C2,C3,C4",C,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,4,,"C1=1uF,C2=1uF, C4=0.1uF, C3 =",Done
+J2,Conn_01x04_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1,,,n/A
+"R1,R2,R3,R4",R,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,4,,"R1 = 330-1K, R2=, R3 = , R4",
+U1,TMP235AEDBZRQ1,TMP235AEDBZRQ1,TMP235:SOT-23_DBZ_TEX,1,,"TMP235A2, TMP236A2",Done
+U2,MIC5504-3.3YM5-TR,MIC5504-3.3YM5-TR,MIC5504:SOT-23-5_MC_MCH,1,,,Done
+U3,SN74LVC1G3157DCKR,SN74LVC1G3157DCKR,SN74LVC1G3157DBVR:DBV6,1,,https://www.digikey.ca/en/products/detail/texas-instruments/SN74LVC1G3157DBVR/562896,Done
+U4,LPV812DGK,https://www.ti.com/lit/ds/symlink/lpv812.pdf,Package_SO:VSSOP-8_3.0x3.0mm_P0.65mm,1,,,Done

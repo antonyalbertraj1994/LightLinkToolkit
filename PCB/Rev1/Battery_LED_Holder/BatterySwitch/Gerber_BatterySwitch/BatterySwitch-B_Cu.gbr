@@ -1,0 +1,49 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.1*%
+%TF.CreationDate,2025-01-22T20:15:40-07:00*%
+%TF.ProjectId,BatterySwitch,42617474-6572-4795-9377-697463682e6b,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L2,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 8.0.1) date 2025-01-22 20:15:40*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,ComponentPad*%
+%ADD10C,1.346200*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD11R,1.700000X1.700000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD12O,1.700000X1.700000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.P,SW1,5*%
+%TO.N,N/C*%
+X136640000Y-73300000D03*
+%TO.P,SW1,6*%
+X130340002Y-73300000D03*
+%TD*%
+D11*
+%TO.P,J2,1,Pin_1*%
+%TO.N,GND*%
+X132615000Y-81340000D03*
+D12*
+%TO.P,J2,2,Pin_2*%
+%TO.N,SWITCH_OUT*%
+X130075000Y-81340000D03*
+%TD*%
+D11*
+%TO.P,J1,1,Pin_1*%
+%TO.N,VCC*%
+X126340000Y-77230000D03*
+D12*
+%TO.P,J1,2,Pin_2*%
+%TO.N,GND*%
+X126340000Y-74690000D03*
+%TD*%
+M02*

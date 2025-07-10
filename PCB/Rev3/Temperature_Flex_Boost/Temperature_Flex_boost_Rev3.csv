@@ -1,0 +1,17 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Value,Added to Digikey Cart
+C1,120pF,~,Capacitor_SMD:C_0603_1608Metric,1,,,Yes
+"C2,C8,C9",10uF,~,Capacitor_SMD:C_0603_1608Metric,3,,"10 uF, 22 uF ",Yes
+"C3,C5",0.1uF,~,Capacitor_SMD:C_0603_1608Metric,2,,"0.1uF, 1uF",Yes
+"C4,C6,CTim1",C,~,Capacitor_SMD:C_0603_1608Metric,3,,"CTim = 10uF, C4=0.01uF, C6 = 0.1uF",Yes
+C7,2.2uF,~,Capacitor_SMD:C_0603_1608Metric,1,,2.2uF,Yes
+CR1,BAT54WS-7-F,BAT54WS-7-F,BAT54WS_7_F:SOD323_DIO-M,1,,"Alternatives:B5819WS,MBR0530",Yes
+J2,Conn_01x04_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1,,,
+L1,2.2uH,~,Inductor_SMD:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder,1,,,Yes
+"R1,R2,RT1,RT2,R_Curr1",R,~,Resistor_SMD:R_0603_1608Metric,5,,"R1 = 47K, 56.2K,60.4K: R2 =  Nothing",Yes
+R3,5,~,Capacitor_SMD:C_0603_1608Metric,1,,5 ohm resistor,Yes
+U1,TPS613222ADBVR,TPS613222ADBVR,TPS613222ADBVR:DBV0005A_N,1,,,Yes
+U2,LMC555,LMC555CMX/NOPB,LMC555:D0008A_M,1,,,Yes
+U3,SN74LVC1G3157DCKR,SN74LVC1G3157DCKR,SN74LVC1G3157DCKR:DCK0006A_N,1,,,Yes
+U4,LM321,http://www.ti.com/lit/ds/symlink/lm321.pdf,Package_TO_SOT_SMD:SOT-23-5,1,,,Yes
+U5,TMP235AEDBZRQ1,TMP235AEDBZRQ1,TMP235:SOT-23_DBZ_TEX-M,1,,,Not needed
+,TMP236A2DBZR,,,,,,Yes

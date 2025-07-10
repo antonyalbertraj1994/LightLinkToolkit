@@ -1,0 +1,11 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Availability,Added To list
+"C1,C2,C5,C7",1uF,~,-- mixed values --,4,,No,Yes
+C3,10uF,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,1,,Yes,No
+"C4,C6",0.1uF,~,Capacitor_SMD:C_0603_1608Metric,2,,Yes,No
+"D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16",LED,~,LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,16,,Yes,
+J3,Conn_01x04_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1,,Yes,
+"R1,R3,RF1",R,~,-- mixed values --,3,,Yes,
+U1,MIC5504,MIC5504-3.3YM5-TR,SOT-23-5_MC_MCH,1,,Yes,
+U2,LM321,http://www.ti.com/lit/ds/symlink/lm321.pdf,Package_TO_SOT_SMD:SOT-23-5,1,,Yes,
+U3,ATtiny85,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,Yes,
+U4,STP16CP05MTR,,STP16CP05MTR:SOIC127P1032X265-24N,1,,Yes,

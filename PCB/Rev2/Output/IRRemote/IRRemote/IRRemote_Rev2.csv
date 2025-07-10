@@ -1,0 +1,10 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Availabilty
+"C1,C2,C4,C5,C6",1uF,~,Capacitor_SMD:C_0603_1608Metric,5,,Yes
+C3,0.1uF,~,Capacitor_SMD:C_0603_1608Metric,1,,Yes
+D2,BPW34-SMD,https://dammedia.osram.info/media/resource/hires/osram-dam-5488319/BPW%2034%20S_EN.pdf,OptoDevice:Osram_BPW34S-SMD,1,,Yes
+J1,Conn_2,~,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,1,,Yes
+L1,IRLED,IR12-21C/TR8,IR12_21C_TR8:LED_IR12-21C&slash_TR8_EVE,1,,Yes
+"R1,R2,RF1",R,~,Resistor_SMD:R_0603_1608Metric,3,,Yes
+U1,ATtiny85,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,Yes
+U2,MIC5504,MIC5504-3.3YM5-TR,Package_TO_SOT_SMD:SOT-23-5,1,,Yees
+U3,LM321,http://www.ti.com/lit/ds/symlink/lm321.pdf,Package_TO_SOT_SMD:SOT-23-5,1,,yes

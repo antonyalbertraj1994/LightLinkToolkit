@@ -1,0 +1,9 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Value,Digikey
+"C1,C2",C,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,2,,1uF,Done
+"D1,D2,D3,D4",D,~,1N4148SMD:SOD123_DIO,4,,,Done
+"J2,J4,J5,J6",Conn_2,~,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,4,,,n/A
+J7,Conn_01x04_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1,,,n/A
+"R1,R2,R3,R4,R5",R,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,5,,"100k, 10K,1K",Done
+"TR1,TR2,TR3,TR4",MMBT2222A-TP,MMBT2222A-TP,MMBT2222A:MTR_MMBT2222A-TP_MCE,4,,,Done
+U1,ATtiny85,http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf,Package_SO:SOIC-8W_5.3x5.3mm_P1.27mm,1,,,Done
+U2,MIC5504,MIC5504-3.3YM5-TR,Package_TO_SOT_SMD:SOT-23-5,1,,,Done

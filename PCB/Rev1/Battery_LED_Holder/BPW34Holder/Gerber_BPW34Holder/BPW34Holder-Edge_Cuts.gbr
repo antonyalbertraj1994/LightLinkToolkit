@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.1*%
+%TF.CreationDate,2025-01-22T20:20:58-07:00*%
+%TF.ProjectId,BPW34Holder,42505733-3448-46f6-9c64-65722e6b6963,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 8.0.1) date 2025-01-22 20:20:58*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X134380000Y-53610000D02*
+X144060000Y-53610000D01*
+X144060000Y-66800000D01*
+X134380000Y-66800000D01*
+X134380000Y-53610000D01*
+M02*

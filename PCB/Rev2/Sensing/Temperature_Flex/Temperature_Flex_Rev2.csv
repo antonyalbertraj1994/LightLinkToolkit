@@ -1,0 +1,11 @@
+Reference,Value,Datasheet,Footprint,Qty,DNP,Availability
+"C1,C2",1uF,~,Capacitor_SMD:C_0603_1608Metric,2,,Yes
+"C3,C5",0.1uF,~,Capacitor_SMD:C_0603_1608Metric,2,,Yes
+"C4,C6,CTim1",C,~,Capacitor_SMD:C_0603_1608Metric,3,,"Yes - Ctim=10uF, 0C4=0.01uF"
+J2,Conn_01x04_Pin,~,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1,,Yes
+"R1,R2,R_Curr1",R,~,Resistor_SMD:R_0603_1608Metric,3,,"Yes R_curr = 100ohm, R1 = 60.4K, 47k, 56.2k, 33k,20k"
+U1,MIC5504-3.3,MIC5504-3.3YM5-TR,MIC5504:SOT-23-5_MC_MCH,1,,Yes
+U2,LMC555,LMC555CMX/NOPB,LMC555:D0008A_M,1,,Yes
+U3,SN74LVC1G3157DCKR,SN74LVC1G3157DCKR,SN74LVC1G3157DCKR:DCK0006A_M,1,,Yes
+U4,LM321,http://www.ti.com/lit/ds/symlink/lm321.pdf,Package_TO_SOT_SMD:SOT-23-5,1,,Yes
+U5,TMP235AEDBZRQ1,TMP235AEDBZRQ1,TMP235:SOT-23_DBZ_TEX-M,1,,Yes
